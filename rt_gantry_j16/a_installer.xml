@@ -1,0 +1,49 @@
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+    <name>Installer</name>
+	<author>RocketTheme, LLC</author>
+	<creationDate>April 20, 2011</creationDate>
+	<copyright>(C) 2005 - 2011 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<version>3.2.4</version>
+	<description></description>
+
+    <scriptfile>install.script.php</scriptfile>
+    <files>
+        <filename plugin="installer">installer.php</filename>
+    </files>
+    <cogs>
+        <cog type="library" enabled="true" protected="false">
+            lib_gantry
+            <name>Gantry Library</name>
+            <description>The Gantry Framework Shared Library for Joomla 1.6</description>
+        </cog>
+        <cog type="component" client="site" access="0" enabled="true" protected="false" remove_admin_menu="true">
+            com_gantry
+            <name>Gantry Component</name>
+            <description>The Gantry Administrative Component for Joomla 1.6</description>
+        </cog>
+        <cog type="plugin" client="site" ordering="1" access="1" enabled="true" protected="false">
+            plg_system_gantry
+            <name>Gantry System Plugin</name>
+            <description>The Gantry System Plugin for Joomla 1.6</description>
+        </cog>
+        <cog type="template" client="site" access="1" enabled="true" protected="false" remove_style="true">
+            rt_gantry_j16
+            <name>rt_gantry_j16</name>
+            <description>${project.description}</description>
+            <style name="rt_gantry_j16 - Default" default="false" master="true" paramsfile="template-options.xml"/>
+        </cog>
+        <cog type="plugin" client="site" ordering="1" access="1" enabled="true" protected="false">
+            plg_system_rokextender
+            <name>RokExtender Plugin</name>
+            <description>RocketTheme RokExtender Plugin</description>
+        </cog>
+        <cog type="module" client="site" access="1" enabled="true" protected="false">
+            mod_roknavmenu
+            <name>RokNavMenu Module</name>
+            <description>RocketTheme RokNavMenu Module for Joomla 1.6</description>
+        </cog>
+    </cogs>
+</extension>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.10">
+	<name>Gantry Template for Joomla 1.5 Bundle</name>
+	<creationDate>April 28, 2011</creationDate>
+	<author>RocketTheme, LLC</author>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<copyright>(C) 2005 - 2011 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<!--  The version string is recorded in the components table -->
+	<version>3.1.13</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>
+		Gantry Template for Joomla 1.5 Install Bundle
+	</description>
+	<installfile>installer/install.php</installfile>
+	<uninstallfile>installer/uninstall.php</uninstallfile>
+	<administration>
+		<files>
+			<folder>installer</folder>
+		</files>
+	</administration>
+	<cogs keepinstaller="false">
+	    <component name="com_gantry" folder="com_gantry">Gantry</component>
+		<template name="rt_gantry_j15" folder="rt_gantry_j15">Gantry Template for Joomla 1.5</template>
+        <plugin name="gantry" group="system" folder="plg_system_gantry" published="true" access="0">Gantry System Plugin</plugin>
+	</cogs>
+</install>
